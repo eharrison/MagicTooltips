@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Gilroy-Bold.otf">
+            <string>Gilroy-Bold</string>
+        </array>
+        <array key="Gilroy-SemiBold.otf">
+            <string>Gilroy-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TooltipView" customModule="MagicTooltips" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="229"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Z1-b8-HXF" userLabel="Top Indicator View" customClass="TriangleView" customModule="MagicTooltips" customModuleProvider="target">
+                    <rect key="frame" x="93" y="0.0" width="14" height="6"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="14" id="0Nz-Rt-CyL"/>
+                        <constraint firstAttribute="height" constant="6" id="9WS-IM-oqc"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ni3-SR-kGO">
+                    <rect key="frame" x="10" y="6" width="180" height="213"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uit-BU-P8q">
+                            <rect key="frame" x="8" y="12" width="164" height="189"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1mb-Sf-UaX">
+                                    <rect key="frame" x="0.0" y="0.0" width="164" height="106"/>
+                                    <fontDescription key="fontDescription" name="Gilroy-Bold" family="Gilroy" pointSize="22"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="500" text="save &amp; access this meditation offline" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qS9-YR-e92">
+                                    <rect key="frame" x="0.0" y="116" width="164" height="33"/>
+                                    <fontDescription key="fontDescription" name="Gilroy-SemiBold" family="Gilroy" pointSize="14"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOE-L7-Rrs">
+                                    <rect key="frame" x="0.0" y="159" width="164" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="M9u-sV-3lG"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Gilroy-Bold" family="Gilroy" pointSize="12"/>
+                                    <state key="normal" title="Got it">
+                                        <color key="titleColor" red="0.0" green="0.56862745100000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="dismiss:" destination="iN0-l3-epB" eventType="touchUpInside" id="HOu-J9-ISZ"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="uit-BU-P8q" firstAttribute="top" secondItem="ni3-SR-kGO" secondAttribute="top" constant="12" id="A5X-ji-Rns"/>
+                        <constraint firstAttribute="trailing" secondItem="uit-BU-P8q" secondAttribute="trailing" constant="8" id="JNa-rm-phj"/>
+                        <constraint firstAttribute="bottom" secondItem="uit-BU-P8q" secondAttribute="bottom" constant="12" id="hlz-iv-rDa"/>
+                        <constraint firstItem="uit-BU-P8q" firstAttribute="leading" secondItem="ni3-SR-kGO" secondAttribute="leading" constant="8" id="pBs-JI-XpP"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3q5-aW-F5u" customClass="InvertedTriangleView" customModule="MagicTooltips" customModuleProvider="target">
+                    <rect key="frame" x="93" y="219" width="14" height="6"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="6" id="aIS-TQ-Iyj"/>
+                        <constraint firstAttribute="width" constant="14" id="d1t-YA-BgT"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XUn-7T-drp" customClass="LeftTriangleView" customModule="MagicTooltips" customModuleProvider="target">
+                    <rect key="frame" x="4" y="105.5" width="6" height="14"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="6" id="4gN-eG-HHy"/>
+                        <constraint firstAttribute="height" constant="14" id="9q0-sl-IEQ"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5cR-xp-txV" customClass="RightTriangleView" customModule="MagicTooltips" customModuleProvider="target">
+                    <rect key="frame" x="190" y="105.5" width="6" height="14"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="6" id="2tg-k7-vSN"/>
+                        <constraint firstAttribute="height" constant="14" id="83k-vL-62k"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="ni3-SR-kGO" secondAttribute="bottom" constant="10" id="1eQ-Xu-cXd"/>
+                <constraint firstItem="5cR-xp-txV" firstAttribute="centerY" secondItem="XUn-7T-drp" secondAttribute="centerY" id="EGf-uW-g1z"/>
+                <constraint firstItem="0Z1-b8-HXF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="H7d-DB-9j3"/>
+                <constraint firstItem="ni3-SR-kGO" firstAttribute="top" secondItem="0Z1-b8-HXF" secondAttribute="bottom" id="PTp-5U-tom"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ni3-SR-kGO" secondAttribute="trailing" constant="10" id="SaI-ty-sMX"/>
+                <constraint firstItem="3q5-aW-F5u" firstAttribute="top" secondItem="ni3-SR-kGO" secondAttribute="bottom" id="aMr-ov-QQ0"/>
+                <constraint firstItem="XUn-7T-drp" firstAttribute="trailing" secondItem="ni3-SR-kGO" secondAttribute="leading" id="gDq-g3-Byf"/>
+                <constraint firstItem="0Z1-b8-HXF" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="lXj-nA-eAx"/>
+                <constraint firstItem="5cR-xp-txV" firstAttribute="leading" secondItem="ni3-SR-kGO" secondAttribute="trailing" id="rNn-xA-3dI"/>
+                <constraint firstItem="ni3-SR-kGO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="sdV-vh-shs"/>
+                <constraint firstItem="XUn-7T-drp" firstAttribute="centerY" secondItem="ni3-SR-kGO" secondAttribute="centerY" id="t8d-bv-Uwm"/>
+                <constraint firstItem="3q5-aW-F5u" firstAttribute="centerX" secondItem="0Z1-b8-HXF" secondAttribute="centerX" id="vPJ-xf-wXT"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="actionButton" destination="fOE-L7-Rrs" id="huZ-gy-p67"/>
+                <outlet property="bottomIndicatorView" destination="3q5-aW-F5u" id="6i2-5F-WDV"/>
+                <outlet property="contentLabel" destination="qS9-YR-e92" id="6rH-l5-M69"/>
+                <outlet property="contentView" destination="ni3-SR-kGO" id="ipN-f9-Ajb"/>
+                <outlet property="indicatorCenterConstraint" destination="lXj-nA-eAx" id="idv-3j-CPv"/>
+                <outlet property="leftIndicatorView" destination="XUn-7T-drp" id="pU8-wL-zgr"/>
+                <outlet property="rightIndicatorView" destination="5cR-xp-txV" id="Icb-gT-xeI"/>
+                <outlet property="titleLabel" destination="1mb-Sf-UaX" id="yHM-H5-b7a"/>
+                <outlet property="topIndicatorView" destination="0Z1-b8-HXF" id="93K-d0-YcQ"/>
+                <outlet property="verticalIndicatorCenterConstraint" destination="t8d-bv-Uwm" id="mhS-bb-aOA"/>
+            </connections>
+            <point key="canvasLocation" x="-233" y="9"/>
+        </view>
+    </objects>
+</document>
