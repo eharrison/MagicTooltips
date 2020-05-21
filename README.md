@@ -22,6 +22,6 @@ The app demonstrates a flexible tooltip manager that will:
 4. Setup tooltips upon start (see **setupTooltips** in **ViewController.swift**)
 
 For more detailed explanation, check article:
-https://medium.com/@ichordnean/flexible-tooltips-in-ios-1ffa5d7d2f36
+https://medium.com/@evandro.hoffmann/flexible-tooltips-in-ios-1ffa5d7d2f36
 
 Happy coding! 😀
